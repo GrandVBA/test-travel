@@ -50,8 +50,82 @@
 			</section>	
 			
 			<section class="request">
-				
+				<h2 class="request__title">Заявка на подбор путеешествия</h2>
+
+				<form action="#">
+					<fieldset class="request__about about">
+						<legend class="about__title">Немного о вас</legend>
+						<div class="request__wrap">
+							<legend for="first-name">Имя</legend>
+							<input type="text" id="first-name" name="first-name">
+							<legend for="phone-input" name="tel">Телефон</legend>
+							<input type="text" id="phone-input">
+						</div>
+					</fieldset>
+
+					<fieldset class="request__about about">
+						<legend class="about__title">О путешествии</legend>
+						<div class="request__wrap">
+							<legend for="location-input">Когда и куда хотите поехать?</legend>
+							<input type="text" id="location-input" name="location">
+							<legend for="date-input">Когда?</legend>
+							<input type="text" id="date-input" name="date">
+						</div>
+					</fieldset>
+
+					<fieldset class="request__about about">
+						<legend class="about__title">Удобный способ связи</legend>
+						<div class="request__wrap checkbox__wrap">
+							<legend for="viber">Viber</legend>
+							<input type="checkbox" id="viber" name="viber">
+							<legend for="WhatsApp">WhatsApp</legend>
+							<input type="checkbox" id="WhatsApp" name="WhatsApp">
+							<legend for="post">Почта</legend>
+							<input type="checkbox" id="post" name="post">
+							<legend for="phone">Телефон</legend>
+							<input type="checkbox" id="phone" name="phone">
+						</div>
+					</fieldset>
+
+					<fieldset class="request__about about">
+						<legend class="about__title">Откуда узнали о нас</legend>
+						<div class="request__wrap checkbox__wrap">
+							<legend for="internet">Интернет</legend>
+							<input type="checkbox" id="internet" name="internet">
+							<legend for="friends">Рекомендовали друзья</legend>
+							<input type="checkbox" id="friends" name="friends">
+							<legend for="social">Соц. сети</legend>
+							<input type="checkbox" id="social" name="social">
+							<legend for="used">Уже ездил</legend>
+							<input type="checkbox" id="used" name="used">
+						</div>
+					</fieldset>
+
+					<div class="request__subscribe subscribe">
+						<label for="subscribe">
+							<input type="checkbox" id="subscribe" name="subscribe">Получать свежие предложения по электронной почте
+						</label>
+						<p class="subscribe__descr">Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент</p>
+					</div>
+
+					<div class="request__data data">
+						<label for="data">
+							<input type="checkbox" id="data" name="data">С обработкой своих персональных данных согласен.
+						</label>
+						<p class="data__descr">Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения</p>
+					</div>
+
+					<p class="request__comment"><span> * </span>Поля, которые надо обязательно заполнить</p>
+
+					<button type="submit">Отправить</button>
+				</form>
 			</section>
+
 		</main>
+
+		<section class="modal">
+	
+		</section>
+
   </body>
 </html>
