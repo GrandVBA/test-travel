@@ -1,0 +1,152 @@
+.tours {
+  &__title {
+    display: flex;
+    justify-content: center;
+
+    margin: 30px 0 0 0;
+    padding: 0 0 15px 0;
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    border-bottom: 2px solid #C4C4C4;
+  }
+  &__list {
+    margin: 30px 0 0 0;
+    list-style: none;
+
+    border-bottom: 2px solid #C4C4C4;
+  }
+  &__item:last-child {
+    display: none;
+  }
+}
+
+.tour {
+  position: relative;
+  margin: 0 0 30px 0;
+  img {
+    width:340px; 
+    height: 195px;
+  }
+  &__title {
+    display: block;
+    position: relative;
+
+    margin: 25px 0 0 0;
+
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    span {
+      position: absolute;
+
+      font-size: 9px;
+      line-height: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $countries-color;
+
+      top: -15px;
+      left: 0;
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 900;
+
+    width: 160px;
+    height: 50px;
+
+    left: 0;
+    top: 145px;
+
+    background: $yellow;
+  }
+  &__route {
+    margin: 15px 0 0 0;
+
+    font-size: 9px;
+    line-height: 13px;
+    font-weight: 700;
+
+    color: $gray;
+  }
+  &__descr {
+    margin: 12px 0 0 0;
+
+    font-size: 9px;
+    line-height: 11px;
+    font-weight: 700;
+
+    width: 160px;
+  }
+  &__flight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 12px 0 0 0;
+
+    font-size: 9px;
+    line-height: 11px;
+    font-weight: 700;
+    color: $white;
+
+    width: 130px;
+    height: 17px;
+
+    background: $red;
+    border-radius: 3px;
+  }
+  &:nth-child(2),
+  &:nth-child(3) {
+    .tour__flight {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tours {
+    &__title {
+      margin: 40px 0 0 0;
+
+      letter-spacing: -2px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+      border: none;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__item:last-child {
+      display: block;
+    }
+  }
+  
+  .tour {
+    margin: 0 0 55px 0;
+
+    width: 380px;
+    height: 370px;
+    img {
+      width:380px; 
+      height: 218px;
+    }
+    &__price {
+      top: 168px;
+    }
+  }
+}

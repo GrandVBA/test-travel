@@ -53,4 +53,229 @@ img {
   max-width: 100%;
   height: 100%;
 }
+
+.g-wrap {
+  width: 340px;
+  padding: 0 17.5px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .g-wrap {
+    width: 780px;
+    padding: 0 122px;
+  }
+  .d-wrap {
+    width: 1001px;
+    padding: 0 23px;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 70px;
+  background: #FFD241;
+}
+
+.header__burger {
+  display: block;
+  position: relative;
+  margin: 0 0 0 auto;
+  width: 30px;
+  height: 4px;
+  border: none;
+  background: #000000;
+  cursor: pointer;
+}
+
+.header__burger::before, .header__burger::after {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 5px;
+  left: 0;
+  background: #000000;
+}
+
+.header__burger::before {
+  top: 8px;
+}
+
+.header__burger::after {
+  top: -9px;
+}
+
+.tours__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 0 0 0;
+  padding: 0 0 15px 0;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-bottom: 2px solid #C4C4C4;
+}
+
+.tours__list {
+  margin: 30px 0 0 0;
+  list-style: none;
+  border-bottom: 2px solid #C4C4C4;
+}
+
+.tours__item:last-child {
+  display: none;
+}
+
+.tour {
+  position: relative;
+  margin: 0 0 30px 0;
+}
+
+.tour img {
+  width: 340px;
+  height: 195px;
+}
+
+.tour__title {
+  display: block;
+  position: relative;
+  margin: 25px 0 0 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.tour__title span {
+  position: absolute;
+  font-size: 9px;
+  line-height: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #C5B223;
+  top: -15px;
+  left: 0;
+}
+
+.tour__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 900;
+  width: 160px;
+  height: 50px;
+  left: 0;
+  top: 145px;
+  background: #FFD241;
+}
+
+.tour__route {
+  margin: 15px 0 0 0;
+  font-size: 9px;
+  line-height: 13px;
+  font-weight: 700;
+  color: #8C8C8C;
+}
+
+.tour__descr {
+  margin: 12px 0 0 0;
+  font-size: 9px;
+  line-height: 11px;
+  font-weight: 700;
+  width: 160px;
+}
+
+.tour__flight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 12px 0 0 0;
+  font-size: 9px;
+  line-height: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  width: 130px;
+  height: 17px;
+  background: #CB0037;
+  border-radius: 3px;
+}
+
+.tour:nth-child(2) .tour__flight, .tour:nth-child(3) .tour__flight {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .tours__title {
+    margin: 40px 0 0 0;
+    letter-spacing: -2px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+    border: none;
+  }
+  .tours__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .tours__item:last-child {
+    display: block;
+  }
+  .tour {
+    margin: 0 0 55px 0;
+    width: 380px;
+    height: 370px;
+  }
+  .tour img {
+    width: 380px;
+    height: 218px;
+  }
+  .tour__price {
+    top: 168px;
+  }
+}
+
+.request__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px 0 0 0;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 900;
+}
 /*# sourceMappingURL=style.css.map */

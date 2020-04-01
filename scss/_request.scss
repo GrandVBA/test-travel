@@ -1,0 +1,13 @@
+.request {
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 25px 0 0 0;
+
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 900;
+  }
+}

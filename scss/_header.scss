@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+
+  min-height: 70px;
+  background:$yellow;
+  &__burger {
+    display: block;
+    position: relative;
+
+    margin: 0 0 0 auto;
+
+    width: 30px;
+    height: 4px;
+    border: none;
+    background: $black;
+    cursor: pointer;
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 30px;
+      height: 5px;
+
+      left: 0;
+
+      background: $black;
+    }
+    &::before {
+      top: 8px;
+    }
+    &::after {
+      top: -9px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  
+}
