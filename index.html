@@ -62,54 +62,84 @@
 						<fieldset>
 							<legend class="form__title">Немного о вас</legend>
 							<div class="form__contain">
-								<legend for="first-name">Имя</legend>
-								<input type="text" id="first-name" name="first-name">
-								<legend for="phone-input">Телефон</legend>
-								<input type="text" id="phone-input" name="tel">
+								<p class="form__element">
+									<label class="form__value" for="first-name">Имя</label>
+									<input type="text" id="first-name" name="first-name">
+								</p>
+								<p class="form__element">
+									<label class="form__value" for="phone-input">Телефон</label>
+									<input type="text" id="phone-input" name="tel">
+								</p>
 							</div>
 						</fieldset>
 
 						<fieldset>
 							<legend class="form__title">О путешествии</legend>
 							<div class="form__contain">
-								<legend for="location">Куда и когда хотите поехать?</legend>
-								<input type="text" id="location" name="location">
-								<legend for="date">Когда?</legend>
-								<input type="text" id="date" name="date">
+								<p class="form__element">
+									<label class="form__value" for="location">Куда и когда хотите поехать?</label>
+									<input type="text" id="location" name="location">
+								</p>
+								<p class="form__element">
+									<label class="form__value" for="date">Когда?</label>
+									<input type="text" id="date" name="date">
+								</p>
 							</div>
 						</fieldset>
 
-						<fieldset>
-							<legend class="form__title">Удобный способ связи</legend>
-							<div class="form__contain form__contain--checkbox">
-								<legend for="viber">Viber</legend>
-								<input type="checkbox" id="viber" name="viber">
-								<legend for="WhatsApp">WhatsApp</legend>
-								<input type="checkbox" id="WhatsApp" name="WhatsApp">
-								<legend for="post">Почта</legend>
-								<input type="checkbox" id="post" name="post">
-								<legend for="phone">Телефон</legend>
-								<input type="checkbox" id="phone" name="phone">
-							</div>
-						</fieldset>
-
-						<fieldset>
-							<legend class="form__title">Откуда узнали о нас</legend>
-							<div class="form__contain form__contain--checkbox">
-								<legend for="internet">Интернет</legend>
-								<input type="checkbox" id="internet" name="internet">
-								<legend for="friends">Рекомендовали друзья</legend>
-								<input type="checkbox" id="friends" name="friends">
-								<legend for="social">Соц. сети</legend>
-								<input type="checkbox" id="social" name="social">
-								<legend for="used">Уже ездил</legend>
-								<input type="checkbox" id="used" name="used">
-							</div>
-						</fieldset>
-
+						<div class="form__flex">
+							<fieldset>
+								<legend class="form__title">Удобный способ связи</legend>
+								<div class="form__contain form__contain--checkbox">
+									<p class="form__checkbox">
+										<input class="visually-hidden" type="checkbox" id="viber" name="viber">
+										<label class="form__value" for="viber">Viber</label>
+									</p>
+									<p class="form__checkbox">
+										<input class="visually-hidden" type="checkbox" id="WhatsApp" name="WhatsApp" checked>
+										<label class="form__value" for="WhatsApp">WhatsApp</label>
+									</p>
+									<p class="form__checkbox">
+										<input class="visually-hidden" type="checkbox" id="post" name="post">
+										<label class="form__value" for="post">Почта</label>
+									</p>
+									<p class="form__checkbox">
+										<input class="visually-hidden" type="checkbox" id="phone" name="phone">
+										<label class="form__value" for="phone">Телефон</label>
+									</p>
+								</div>
+							</fieldset>
+	
+							<fieldset>
+								<legend class="form__title">Откуда узнали о нас</legend>
+								<div class="form__contain form__contain--checkbox">
+									<p class="form__checkbox">
+										<input type="checkbox" id="internet" name="internet">
+										<label class="form__value" for="internet">Интернет</label>
+									</p>
+									
+									<p class="form__checkbox">
+										<input type="checkbox" id="friends" name="friends">
+										<label class="form__value" for="friends">Рекомендовали друзья</label>
+									</p>
+									
+									<p class="form__checkbox">
+										<input type="checkbox" id="social" name="social" checked>
+										<label class="form__value" for="social">Соц. сети</label>
+									</p>
+									
+									<p class="form__checkbox">
+										<input type="checkbox" id="used" name="used">
+										<label class="form__value" for="used">Уже ездил</label>
+									</p>
+								</div>
+							</fieldset>
+						</div>
+						
 						<div class="form__subscribe subscribe">
 							<label for="subscribe">
-								<input type="checkbox" id="subscribe" name="subscribe">Получать свежие предложения по электронной почте
+								<input type="checkbox" id="subscribe" name="subscribe" checked>Получать свежие предложения по электронной почте
+								<span class="indicator"></span>
 							</label>
 							<p class="subscribe__descr">Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент</p>
 						</div>
@@ -117,11 +147,12 @@
 						<div class="form__data data">
 							<label for="data">
 								<input type="checkbox" id="data" name="data">С обработкой своих персональных данных согласен.
+								<span class="indicator"></span>
 							</label>
 							<p class="data__descr">Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения</p>
 						</div>
 
-						<p class="form__comment"><span> * </span>Поля, которые надо обязательно заполнить</p>
+						<p class="form__comment">Поля, которые надо обязательно заполнить</p>
 
 						<button class="form__btn" type="submit">Отправить</button>
 					</form>

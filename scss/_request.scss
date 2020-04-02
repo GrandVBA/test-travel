@@ -11,3 +11,243 @@
     font-weight: 900;
   }
 }
+
+.form {
+  min-height: 1156px;
+  fieldset {
+    margin: 35px 0 0 0;
+    padding: 0;
+    border: none;
+  }
+  &__title {
+    margin: 0 0 10px 0;
+    padding: 0 0 5px 0;
+
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    border-bottom: 2px solid $black;
+  }
+  &__contain {
+    &--checkbox {
+      display: flex;
+      justify-content: space-between;
+
+      width: 295px;
+      margin: 25px auto 0 auto;
+    }
+  }
+  &__element {
+    margin: 15px 0 0 0;
+    input[type="text"] {
+      margin: 7px 0 0 0;
+      width: 338px;
+      height: 48px;
+
+      border: 1px solid #e7e7e7;
+      border-radius: 3px;
+    }
+  }
+  &__value {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__checkbox {
+    margin: 0;
+    height: 70px;
+    width: 60px;
+    input[type="checkbox"] {
+      display: none;
+    }
+    label {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      text-align: center;
+      height: 12px;
+
+      font-size: 10px;
+      line-height: 12px;
+      font-weight: 700;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 38px;
+        height: 38px;
+
+        top: 22px;
+        left: 10px;
+
+        border: 1px solid #e7e7e7;
+        border-radius: 3px;
+      }
+    }
+    input[type="checkbox"]:checked + label::after {
+      position: absolute;
+      content: '';
+
+      width: 20px;
+      height: 12px;
+
+      top: 36px;
+      left: 20px;
+
+      background: url("../img/checkbox.svg") no-repeat center;
+    }
+  }
+
+
+
+  label[for="first-name"]::after,
+  label[for="location"]::after {
+    content: ' *';
+    color: $required;
+  }
+
+  &__comment {
+    margin: 40px 0 0 0;
+    padding: 0 0 0 30px;
+
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 300;
+    color: #c1c1c1;
+    &::before {
+      content: '* ';
+      color: $required;
+    }
+  }
+
+  &__btn {
+    display: block;
+    position: relative;
+
+    margin: 30px auto 0 auto;
+    padding: 0 0 0 30px;
+
+    width: 280px;
+    height: 49px;
+
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: left;
+
+    background: $yellow;
+    border-radius: 29.5px;
+    border: none;
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 6px;
+      height: 10px;
+
+      top: 19px;
+      right: 25px;
+
+      background: url("../img/arrow-btn.svg") no-repeat center;
+    }
+  }
+}
+
+.subscribe,
+.data {
+  margin: 30px 0 0 0;
+  input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    position: relative;
+    padding: 0 0 0 32px;
+
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 700;
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 13px;
+      height: 13px;
+
+      left: 0;
+      top: -2px;
+
+      border: 1px solid #e7e7e7;
+    }
+    input[type="checkbox"]:checked + .indicator::after {
+      position: absolute;
+      content: '';
+  
+      width: 11px;
+      height: 6px;
+  
+      top: 3px;
+      left: 2px;
+  
+      background: url("../img/smile-checkbox.svg") no-repeat center;
+    }
+  }
+  &__descr {
+    margin: 10px 0 0 0;
+    padding: 0 0 0 32px;
+
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 300;
+    color: #c1c1c1;
+  }
+}
+
+.data label::after {
+  content: ' *';
+  color: $required;
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    min-height: 900px;
+    &__contain {
+      display: flex;
+      justify-content: space-between;
+      &--checkbox {
+        width: 320px;
+      }
+    }
+    &__element {
+      display: flex;
+      flex-direction: column;
+      input[type="text"] {
+        width: 378px;
+      }
+    }
+    &__flex {
+      display: flex;
+      justify-content: space-between;
+      fieldset {
+        width: 380px;
+      }
+    }
+    &__comment {
+      margin: 50px 0 0 0;
+    }
+    &__btn {
+      margin: 50px 0 0 0;
+    }
+  }
+  .subscribe,
+  .data {
+    margin: 50px 0 0 0;
+    &__descr {
+      margin: 20px 0 0 0;
+    }
+  }
+}
