@@ -65,12 +65,12 @@
 							<legend class="form__title">Немного о вас</legend>
 							<div class="form__contain">
 								<p class="form__element">
+									<input type="text" id="first-name" name="first-name" required>
 									<label class="form__value" for="first-name">Имя</label>
-									<input type="text" id="first-name" name="first-name">
 								</p>
 								<p class="form__element">
+									<input type="tel" name="tel" id="phone-input" pattern="2[0-9]{3}-[0-9]{3}">
 									<label class="form__value" for="phone-input">Телефон</label>
-									<input type="text" id="phone-input" name="tel">
 								</p>
 							</div>
 						</fieldset>
@@ -79,12 +79,12 @@
 							<legend class="form__title">О путешествии</legend>
 							<div class="form__contain">
 								<p class="form__element">
+									<input type="text" id="location" name="location" required>
 									<label class="form__value" for="location">Куда и когда хотите поехать?</label>
-									<input type="text" id="location" name="location">
 								</p>
 								<p class="form__element">
-									<label class="form__value" for="date">Когда?</label>
 									<input type="text" id="date" name="date">
+									<label class="form__value" for="date">Когда?</label>
 								</p>
 							</div>
 						</fieldset>
@@ -148,7 +148,7 @@
 
 						<div class="form__data data">
 							<label for="data">
-								<input type="checkbox" id="data" name="data">С обработкой своих персональных данных согласен.
+								<input type="checkbox" id="data" name="data" required>С обработкой своих персональных данных согласен.
 								<span class="indicator"></span>
 							</label>
 							<p class="data__descr">Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения</p>
@@ -162,31 +162,32 @@
 			</div>
 		</main>
 
-		<section class="modal">
+		<section class="modal" id="modal">
 			<div class="g-wrap">
 				<button class="modal__close"></button>
 				<form action="#" class="modal__form">
-					<select class="modal__сountries" name="сountries" id="countries">
-						<option value="" disabled selected>Страны</option>
-						<option value="Южная Америка">Южная Америка</option>
-						<option value="Северная Америка">Северная Америка</option>
-						<option value="Арктика и Антарктика">Арктика и Антарктика</option>
-						<option value="Африка">Африка</option>
-						<option value="Австралия">Австралия</option>
-						<option value="Европа">Европа</option>
-						<option value="Россия">Россия</option>
-					</select>
 
-					<select class="modal__сountries" name="сountries" id="countries">
-						<option value="" disabled selected>Тип путешествия</option>
-						<option value="Южная Америка">Активный</option>
-						<option value="Северная Америка">Майские</option>
-						<option value="Арктика и Антарктика">На авто</option>
-						<option value="Африка">На коробле</option>
-						<option value="Австралия">Новый год</option>
-						<option value="Европа">Поход</option>
-						<option value="Россия">Экскурсионный</option>
-					</select>
+					<div class="__select" data-state="">
+						<div class="__select__title" data-default="Option 0">Страны</div>
+						<div class="__select__content">
+							<input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+							<label for="singleSelect0" class="__select__label">Исландия</label>
+							<input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+							<label for="singleSelect1" class="__select__label">Турция</label>
+							<input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+							<label for="singleSelect4" class="__select__label">Тайланд</label>
+							<input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+							<label for="singleSelect2" class="__select__label">Хорватия </label>
+							<input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+							<label for="singleSelect3" class="__select__label">Италия</label>
+							<input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+							<label for="singleSelect4" class="__select__label">Испания</label>
+							<input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+							<label for="singleSelect4" class="__select__label">Франция</label>
+							<input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+							<label for="singleSelect4" class="__select__label">Германия</label>
+						</div>
+					</div>
 
 					<button class="modal__search" type="submit">Найти</button>
 				</form>
@@ -213,7 +214,8 @@
 
 			</div>
 		</section>
-		<div class="modal-overlay"></div>
+
+		<div class="modal-overlay" id="overl"></div>
 
 		<script src="js/script.js"></script>
   </body>

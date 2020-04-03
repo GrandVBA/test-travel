@@ -40,17 +40,49 @@
     }
   }
   &__element {
+    display: flex;
+    flex-direction: column-reverse;
     margin: 15px 0 0 0;
-    input[type="text"] {
+    input[type="text"],
+    input[type="tel"] {
       margin: 7px 0 0 0;
-      width: 338px;
+      padding: 0 0 0 25px;
+      width: 313px;
       height: 48px;
 
       border: 1px solid #e7e7e7;
       border-radius: 3px;
+      &:focus {
+        border: 1px solid $black;
+      }
+      &:required {
+        border: 1px solid $required;
+      }
+      &:required + .form__value::before {
+        position: absolute;
+        content: 'Обязательное поле';
+
+        width: 150px;
+        height: 10px;
+
+        font-size: 10px;
+        line-height: 12px;
+        color: $required;
+        text-transform: none;
+
+        top: 75px;
+        right: -50px;
+      }
+      &:valid {
+        border: 1px solid #e7e7e7;
+      }
+      &:valid + .form__value::before {
+        content: '';
+      }
     }
   }
   &__value {
+    position: relative;
     font-size: 10px;
     line-height: 12px;
     font-weight: 700;
@@ -141,7 +173,7 @@
     text-align: left;
 
     background: $yellow;
-    border-radius: 29.5px;
+    border-radius: 5px;
     border: none;
     &::after {
       position: absolute;
@@ -223,10 +255,12 @@
       }
     }
     &__element {
-      display: flex;
-      flex-direction: column;
-      input[type="text"] {
-        width: 378px;
+      input[type="text"],
+      input[type="tel"]  {
+        width: 353px;
+        &:required + .form__value::before {
+          left: 0;
+        }
       }
     }
     &__flex {
