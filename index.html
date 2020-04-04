@@ -65,11 +65,11 @@
 							<legend class="form__title">Немного о вас</legend>
 							<div class="form__contain">
 								<p class="form__element">
-									<input type="text" id="first-name" name="first-name" required>
+									<input type="text" id="first-name" name="first-name" placeholder="Иван" required>
 									<label class="form__value" for="first-name">Имя</label>
 								</p>
 								<p class="form__element">
-									<input type="tel" name="tel" id="phone-input" pattern="2[0-9]{3}-[0-9]{3}">
+									<input type="tel" name="tel" id="phone-input" pattern="8[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="8-961-ххх-хххх">
 									<label class="form__value" for="phone-input">Телефон</label>
 								</p>
 							</div>
@@ -79,8 +79,8 @@
 							<legend class="form__title">О путешествии</legend>
 							<div class="form__contain">
 								<p class="form__element">
-									<input type="text" id="location" name="location" required>
-									<label class="form__value" for="location">Куда и когда хотите поехать?</label>
+									<input type="text" id="location" name="location" placeholder="Тайланд" required>
+									<label class="form__value" for="location">Куда хотите поехать?</label>
 								</p>
 								<p class="form__element">
 									<input type="text" id="date" name="date">
@@ -140,7 +140,7 @@
 						
 						<div class="form__subscribe subscribe">
 							<label for="subscribe">
-								<input type="checkbox" id="subscribe" name="subscribe" checked>Получать свежие предложения по электронной почте
+								<input type="checkbox" id="subscribe" name="subscribe">Получать свежие предложения по электронной почте
 								<span class="indicator"></span>
 							</label>
 							<p class="subscribe__descr">Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент</p>
@@ -148,7 +148,7 @@
 
 						<div class="form__data data">
 							<label for="data">
-								<input type="checkbox" id="data" name="data" required>С обработкой своих персональных данных согласен.
+								<input type="checkbox" id="data" name="data" required checked>С обработкой своих персональных данных согласен.
 								<span class="indicator"></span>
 							</label>
 							<p class="data__descr">Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения</p>

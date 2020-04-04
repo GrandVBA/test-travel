@@ -3,6 +3,7 @@ var overlay = document.querySelector('.modal-overlay');
 var close = document.querySelector('.modal__close');
 var link = document.querySelector('.toggle');
 var search = document.querySelector('.modal__search');
+var form = document.querySelector('.form');
 
 link.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -26,7 +27,15 @@ overlay.addEventListener('click', function(evt){
   popup.classList.remove('modal-show');
   popup.classList.add('modal-show-two');
   overlay.classList.remove('overlay-show');
-})
+});
+
+/*form.addEventListener('submit', function(evt){
+  if (!checkReq.check) {
+    evt.preventDefault();
+    checkReqErr.classList.remove('checkbox__err');
+    checkReqErr.classList.add('checkbox__err');
+  }
+});*/
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {

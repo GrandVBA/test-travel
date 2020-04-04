@@ -52,31 +52,35 @@
 
       border: 1px solid #e7e7e7;
       border-radius: 3px;
+      &::placeholder {
+        font-weight: 300;
+        opacity: 0.6;
+      }
       &:focus {
         border: 1px solid $black;
       }
-      &:required {
+      &:focus:required {
         border: 1px solid $required;
+        & + .form__value::before {
+          position: absolute;
+          content: 'Обязательное поле';
+  
+          width: 150px;
+          height: 10px;
+  
+          font-size: 10px;
+          line-height: 12px;
+          color: $required;
+          text-transform: none;
+  
+          top: 75px;
+          right: -50px;
+        }
       }
-      &:required + .form__value::before {
-        position: absolute;
-        content: 'Обязательное поле';
-
-        width: 150px;
-        height: 10px;
-
-        font-size: 10px;
-        line-height: 12px;
-        color: $required;
-        text-transform: none;
-
-        top: 75px;
-        right: -50px;
-      }
-      &:valid {
+      &:focus:valid {
         border: 1px solid #e7e7e7;
       }
-      &:valid + .form__value::before {
+      &:focus:valid + .form__value::before {
         content: '';
       }
     }
