@@ -468,7 +468,7 @@ a, button, label, input {
 }
 
 .form label[for="first-name"]::after,
-.form label[for="location"]::after {
+.form label[for="phone-input"]::after {
   content: ' *';
   color: #CB0037;
 }
@@ -553,6 +553,45 @@ a, button, label, input {
   top: 3px;
   left: 2px;
   background: url("../img/smile-checkbox.svg") no-repeat center;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+  }
+}
+
+.subscribe .checkbox__err::before,
+.data .checkbox__err::before {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  border: 1px solid #CB0037;
 }
 
 .subscribe__descr,

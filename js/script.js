@@ -4,6 +4,8 @@ var close = document.querySelector('.modal__close');
 var link = document.querySelector('.toggle');
 var search = document.querySelector('.modal__search');
 var form = document.querySelector('.form');
+var myCheckbox = document.querySelector('[name=data]');
+var labelCheckbox = document.querySelector('.data--req');
 
 link.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -29,13 +31,19 @@ overlay.addEventListener('click', function(evt){
   overlay.classList.remove('overlay-show');
 });
 
-/*form.addEventListener('submit', function(evt){
-  if (!checkReq.check) {
+form.addEventListener('submit', function(evt){
+  if (!myCheckbox.checked) {
     evt.preventDefault();
-    checkReqErr.classList.remove('checkbox__err');
-    checkReqErr.classList.add('checkbox__err');
-  }
-});*/
+    labelCheckbox.classList.remove('checkbox__err');
+    labelCheckbox.classList.add('checkbox__err');
+  } 
+});
+
+form.addEventListener('click', function(evt){
+  if (myCheckbox.checked) {
+    labelCheckbox.classList.remove('checkbox__err');
+  } 
+});
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
